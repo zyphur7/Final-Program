@@ -1,12 +1,13 @@
 class Block {
   float x, y, size; 
   boolean hit;
+  float speed = 1;
 
   Block (float tempX, float tempY, float tempSize) {
     x = tempX;
     y = tempY;
     size = tempSize;
-    boolean hit = false;
+    hit = false;
   }
 
   void display() {
@@ -28,6 +29,10 @@ class Block {
         hit = true;
       }
     }
+  }
+  
+  void move() {
+    y +=speed;
   }
 }
 
